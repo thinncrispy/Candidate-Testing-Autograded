@@ -18,14 +18,12 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-const input = require('readline-sync');
-let candidateName = input.question("What is your name?")
+candidateName = input.question("What is your name? ")
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-const input = require('readline-sync');
-let candidateAnswer = input.question(question);
+candidateAnswer = input.question(question);
 
 
 }
@@ -33,10 +31,10 @@ let candidateAnswer = input.question(question);
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer = correctAnswer) {
+if (correctAnswer == candidateAnswer) {
   console.log("Congratulations, you got the correct answer!");
 } else {
-  console.log("Sorry, but that answer was incorrect!");
+  console.log("Sorry, but that answer is incorrect!");
 }
 
 
@@ -49,7 +47,7 @@ if (candidateAnswer = correctAnswer) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Welcome to the quiz!" + candidateName);
+   console.log("Welcome to the quiz, " + candidateName + "!");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
