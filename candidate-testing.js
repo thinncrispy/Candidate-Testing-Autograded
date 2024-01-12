@@ -25,7 +25,7 @@ let candidateName = input.question("What is your name?")
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 const input = require('readline-sync');
-let candidateAnswer = input.question("question");
+let candidateAnswer = input.question(question);
 
 
 }
@@ -33,7 +33,7 @@ let candidateAnswer = input.question("question");
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer == correctAnswer) {
+if (candidateAnswer = correctAnswer) {
   console.log("Congratulations, you got the correct answer!");
 } else {
   console.log("Sorry, but that answer was incorrect!");
