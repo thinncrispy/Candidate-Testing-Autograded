@@ -11,16 +11,19 @@ let candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
+// Creating an array called questions, containing all the questions
 let questions = ["Who was the first American woman in space? ",
-                 "True or false: 5 kilometer == 5000 meters ",
-                 "(5 + 3)/2 * 10 =? ",
+                 "True or false: 5 kilometer == 5000 meters? ",
+                 "(5 + 3)/2 * 10 = ? ",
                  "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
                  "What is the minimum crew size for the ISS? "];
+// Creating an array called correctAnswers, containing all the correct quiz answers
 let correctAnswers = ["Sally Ride",
                       "true",
                       "40",
                       "Trajectory",
                       "3"];
+// Creating an empty array named candidate Answers to store the users input
 let candidateAnswers = [];
 
 
@@ -32,6 +35,7 @@ candidateName = input.question("What is your name? ")
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
+  // this is a loop that goes through the questions array declared earlier, and pushes the inputted answer for each question in the array
   for (i = 0; i < questions.length; i++){
     candidateAnswer = input.question(questions[i]);
     candidateAnswers.push(candidateAnswer);
@@ -45,7 +49,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   
-  console.log(`Your answers were ${candidateAnswers}, and the correct answers are ${correctAnswers}`)
+  console.log(`Your answers were "[${candidateAnswers}]" and the correct answers are "[${correctAnswers}]"`)
 
 
 // if (correctAnswer == candidateAnswer) {
