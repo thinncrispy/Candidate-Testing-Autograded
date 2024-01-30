@@ -49,6 +49,8 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
   let score = 0;
   for (let i = 0; i < questions.length; i++){
+    console.log(`Question: ${questions[i]} +\n Your answer: ${candidateAnswers[i]}`);
+    console.log(`Correct answer: ${correctAnswers[i]}`);
     if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
       score++;
     }
@@ -70,7 +72,7 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
    console.log("Welcome to the quiz, " + candidateName + "!");
   askQuestion();
-  gradeQuiz(this.candidateAnswers);
+  gradeQuiz(candidateAnswers);
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
